@@ -125,7 +125,11 @@ def start_server(name, out, profile):
         if sock.connect_ex(("127.0.0.1", PORT)) == 0:
             raise RuntimeError(f"port {PORT} is already in use (an old server?); stop it or set VLLM_PORT")
     logf = out / "logs" / f"server-{name}.log"
-    cmd = [VLLM, "serve", model, *SERVER_ARGS[profile], "--port", str(PORT), *extra]
+    args = list(SERVER_ARGS[profile])
+    if name in ("bf16-eagle3", "bf16-ngram"):
+        # Spec-decoding prompts are under 2k tokens. A short context leaves room for the 2 GB EAGLE-3 draft on a 24 GB L4.
+        args[args.index("--max-model-len") + 1] = "4096"
+    cmd = [VLLM, "serve", model, *args, "--port", str(PORT), *extra]
     proc = subprocess.Popen(cmd, stdout=open(logf, "w"), stderr=subprocess.STDOUT, start_new_session=True)
     t0 = time.time()
     while time.time() - t0 < 1500:

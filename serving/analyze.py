@@ -159,7 +159,7 @@ def cost_table(df, price):
 
 def md(df, digits=2):
     """A markdown table without the tabulate dependency."""
-    fmt = lambda v: "" if v is None or (isinstance(v, float) and math.isnan(v)) else f"{v:.{digits}f}" if isinstance(v, float) else str(v)
+    fmt = lambda v: "–" if v is None or (isinstance(v, float) and math.isnan(v)) else f"{v:.{digits}f}" if isinstance(v, float) else str(v)
     return "\n".join(["| " + " | ".join(df.columns) + " |", "|" + "---|" * len(df.columns)] +
                      ["| " + " | ".join(fmt(v) for v in row) + " |" for row in df.itertuples(index=False)])
 
