@@ -10,7 +10,7 @@ it carries on. Failed runs leave an `.error` file and are retried on the next st
 import argparse, json, os, re, signal, subprocess, sys, time, urllib.request
 from pathlib import Path
 
-VLLM = os.environ.get("VLLM_BIN", "vllm")
+VLLM = os.environ.get("BENCH_VLLM_BIN", "vllm")
 PORT = int(os.environ.get("VLLM_PORT", 8000))
 BASE = f"http://127.0.0.1:{PORT}"
 

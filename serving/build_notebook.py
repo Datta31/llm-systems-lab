@@ -75,7 +75,7 @@ PY = sys.executable
 BIN = Path(PY).parent
 VLLM = shutil.which("vllm") or str(BIN / "vllm")
 HF = shutil.which("hf") or str(BIN / "hf")
-os.environ["VLLM_BIN"] = VLLM
+os.environ["BENCH_VLLM_BIN"] = VLLM
 !{VLLM} --version
 """)
 code("""
