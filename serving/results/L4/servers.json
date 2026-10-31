@@ -1,0 +1,64 @@
+{
+ "bf16": {
+  "server": "bf16",
+  "model": "Qwen/Qwen3-8B",
+  "args": [],
+  "startup_s": 270.1,
+  "kv_cache_tokens": 22960,
+  "kv_max_concurrency_at_max_len": 1.87,
+  "weights_gib": 15.27
+ },
+ "fp8": {
+  "server": "fp8",
+  "model": "Qwen/Qwen3-8B-FP8",
+  "args": [],
+  "startup_s": 145.0,
+  "kv_cache_tokens": 68800,
+  "kv_max_concurrency_at_max_len": 5.6,
+  "weights_gib": 8.9
+ },
+ "int4": {
+  "server": "int4",
+  "model": "Qwen/Qwen3-8B-AWQ",
+  "args": [],
+  "startup_s": 140.0,
+  "kv_cache_tokens": 92224,
+  "kv_max_concurrency_at_max_len": 7.51,
+  "weights_gib": 5.71
+ },
+ "bf16-nocache": {
+  "server": "bf16-nocache",
+  "model": "Qwen/Qwen3-8B",
+  "args": [
+   "--no-enable-prefix-caching"
+  ],
+  "startup_s": 105.0,
+  "kv_cache_tokens": 30208,
+  "kv_max_concurrency_at_max_len": 2.46,
+  "weights_gib": 15.27
+ },
+ "bf16-eagle3": {
+  "server": "bf16-eagle3",
+  "model": "Qwen/Qwen3-8B",
+  "args": [
+   "--speculative-config",
+   "{\"method\": \"eagle3\", \"model\": \"RedHatAI/Qwen3-8B-speculator.eagle3\", \"num_speculative_tokens\": 3}"
+  ],
+  "startup_s": 180.0,
+  "kv_cache_tokens": 4288,
+  "kv_max_concurrency_at_max_len": 1.05,
+  "weights_gib": 17.17
+ },
+ "bf16-ngram": {
+  "server": "bf16-ngram",
+  "model": "Qwen/Qwen3-8B",
+  "args": [
+   "--speculative-config",
+   "{\"method\": \"ngram\", \"num_speculative_tokens\": 4, \"prompt_lookup_min\": 2, \"prompt_lookup_max\": 4}"
+  ],
+  "startup_s": 145.0,
+  "kv_cache_tokens": 22176,
+  "kv_max_concurrency_at_max_len": 5.41,
+  "weights_gib": 15.27
+ }
+}

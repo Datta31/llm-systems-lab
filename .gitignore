@@ -2,3 +2,7 @@ __pycache__/
 .ipynb_checkpoints/
 *.zip
 serving/results/*/raw/
+.DS_Store
+serving/results/*/logs/
+serving/results/*/mem.log
+serving/results/*/preflight/

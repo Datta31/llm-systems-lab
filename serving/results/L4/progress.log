@@ -1,0 +1,65 @@
+08:30:57  NVIDIA L4 · profile small · vLLM 0.32.0 · 0 done, 46 to run
+08:31:16  starting server bf16 (16 runs)
+08:37:03  NVIDIA L4 · profile small · vLLM 0.32.0 · 0 done, 46 to run
+08:37:03  starting server bf16 (16 runs)
+08:41:39    up in 275.1 s · KV cache 22960 tokens · weights 15.27 GiB
+08:47:43    bf16__chat__c1: 16 out tok/s · p50 TTFT 330 ms · p50 TPOT 60.6 ms · 20/20 ok
+08:49:45    bf16__chat__c4: 57 out tok/s · p50 TTFT 860 ms · p50 TPOT 66.8 ms · 20/20 ok
+08:51:52    bf16__chat__c16: 172 out tok/s · p50 TTFT 1898 ms · p50 TPOT 85.1 ms · 64/64 ok
+08:55:30    bf16__chat__c32: 178 out tok/s · p50 TTFT 24229 ms · p50 TPOT 98.8 ms · 128/128 ok
+09:02:43    bf16__agent__c1: 13 out tok/s · p50 TTFT 2688 ms · p50 TPOT 64.7 ms · 20/20 ok
+09:07:16    bf16__agent__c2: 22 out tok/s · p50 TTFT 2921 ms · p50 TPOT 79.1 ms · 20/20 ok
+10:35:15  NVIDIA L4 · profile small · vLLM 0.32.0 · 6 done, 40 to run
+10:35:15  starting server bf16 (10 runs)
+10:39:46    up in 270.1 s · KV cache 22960 tokens · weights 15.27 GiB
+10:44:18    bf16__agent__c4: 22 out tok/s · p50 TTFT 26517 ms · p50 TPOT 81.6 ms · 20/20 ok
+10:51:14    bf16__agent__c8: 22 out tok/s · p50 TTFT 74180 ms · p50 TPOT 81.8 ms · 32/32 ok
+10:58:18    bf16__prefix__c4: 41 out tok/s · p50 TTFT 912 ms · p50 TPOT 80.4 ms · 128/128 ok
+11:04:03    bf16__prefix__c8: 51 out tok/s · p50 TTFT 4382 ms · p50 TPOT 85.7 ms · 128/128 ok
+11:10:11    bf16__spec-code__c1: 17 out tok/s · p50 TTFT 152 ms · p50 TPOT 60.0 ms · 24/24 ok
+11:11:33    bf16__spec-code__c8: 114 out tok/s · p50 TTFT 327 ms · p50 TPOT 65.6 ms · 24/24 ok
+11:12:59    bf16__spec-code__c16: 205 out tok/s · p50 TTFT 690 ms · p50 TPOT 69.2 ms · 48/48 ok
+11:19:53    bf16__spec-chat__c1: 17 out tok/s · p50 TTFT 77 ms · p50 TPOT 59.9 ms · 24/24 ok
+11:21:13    bf16__spec-chat__c8: 125 out tok/s · p50 TTFT 149 ms · p50 TPOT 63.6 ms · 24/24 ok
+11:22:34    bf16__spec-chat__c16: 245 out tok/s · p50 TTFT 202 ms · p50 TPOT 64.8 ms · 48/48 ok
+11:22:40  starting server fp8 (8 runs)
+11:25:05    up in 145.0 s · KV cache 68800 tokens · weights 8.9 GiB
+11:28:42    fp8__chat__c1: 28 out tok/s · p50 TTFT 420 ms · p50 TPOT 34.4 ms · 20/20 ok
+11:30:01    fp8__chat__c4: 94 out tok/s · p50 TTFT 1077 ms · p50 TPOT 38.2 ms · 20/20 ok
+11:31:38    fp8__chat__c16: 226 out tok/s · p50 TTFT 2544 ms · p50 TPOT 60.5 ms · 64/64 ok
+11:33:54    fp8__chat__c32: 297 out tok/s · p50 TTFT 3330 ms · p50 TPOT 96.8 ms · 128/128 ok
+11:38:58    fp8__agent__c1: 19 out tok/s · p50 TTFT 3568 ms · p50 TPOT 38.6 ms · 20/20 ok
+11:42:27    fp8__agent__c2: 29 out tok/s · p50 TTFT 4540 ms · p50 TPOT 49.7 ms · 20/20 ok
+11:45:12    fp8__agent__c4: 38 out tok/s · p50 TTFT 6312 ms · p50 TPOT 83.3 ms · 20/20 ok
+11:48:50    fp8__agent__c8: 44 out tok/s · p50 TTFT 6705 ms · p50 TPOT 158.5 ms · 32/32 ok
+11:48:56  starting server int4 (8 runs)
+11:51:16    up in 140.0 s · KV cache 92224 tokens · weights 5.71 GiB
+11:53:39    int4__chat__c1: 44 out tok/s · p50 TTFT 320 ms · p50 TPOT 21.7 ms · 20/20 ok
+11:54:37    int4__chat__c4: 140 out tok/s · p50 TTFT 818 ms · p50 TPOT 25.2 ms · 20/20 ok
+11:55:53    int4__chat__c16: 301 out tok/s · p50 TTFT 2020 ms · p50 TPOT 44.9 ms · 64/64 ok
+11:57:42    int4__chat__c32: 376 out tok/s · p50 TTFT 2624 ms · p50 TPOT 76.3 ms · 128/128 ok
+12:01:21    int4__agent__c1: 28 out tok/s · p50 TTFT 2831 ms · p50 TPOT 25.8 ms · 20/20 ok
+12:03:59    int4__agent__c2: 39 out tok/s · p50 TTFT 3643 ms · p50 TPOT 34.5 ms · 20/20 ok
+12:06:11    int4__agent__c4: 49 out tok/s · p50 TTFT 5734 ms · p50 TPOT 62.1 ms · 20/20 ok
+12:09:10    int4__agent__c8: 54 out tok/s · p50 TTFT 5400 ms · p50 TPOT 128.7 ms · 32/32 ok
+12:09:16  starting server bf16-nocache (2 runs)
+12:11:01    up in 105.0 s · KV cache 30208 tokens · weights 15.27 GiB
+12:21:09    bf16-nocache__prefix__c4: 28 out tok/s · p50 TTFT 4040 ms · p50 TPOT 110.7 ms · 128/128 ok
+12:31:15    bf16-nocache__prefix__c8: 28 out tok/s · p50 TTFT 21345 ms · p50 TPOT 115.4 ms · 128/128 ok
+12:31:21  starting server bf16-eagle3 (6 runs)
+12:34:21    up in 180.0 s · KV cache 4288 tokens · weights 17.17 GiB
+12:37:00    bf16-eagle3__spec-code__c1: 41 out tok/s · p50 TTFT 181 ms · p50 TPOT 23.3 ms · 24/24 ok
+12:37:47    bf16-eagle3__spec-code__c8: 228 out tok/s · p50 TTFT 479 ms · p50 TPOT 28.9 ms · 24/24 ok
+12:38:55    bf16-eagle3__spec-code__c16: 237 out tok/s · p50 TTFT 6105 ms · p50 TPOT 31.3 ms · 48/48 ok
+12:42:44    bf16-eagle3__spec-chat__c1: 31 out tok/s · p50 TTFT 148 ms · p50 TPOT 31.7 ms · 24/24 ok
+12:43:37    bf16-eagle3__spec-chat__c8: 208 out tok/s · p50 TTFT 242 ms · p50 TPOT 36.1 ms · 24/24 ok
+12:44:32    bf16-eagle3__spec-chat__c16: 389 out tok/s · p50 TTFT 252 ms · p50 TPOT 37.2 ms · 48/48 ok
+12:44:37  starting server bf16-ngram (6 runs)
+12:47:02    up in 145.0 s · KV cache 22176 tokens · weights 15.27 GiB
+12:49:52    bf16-ngram__spec-code__c1: 37 out tok/s · p50 TTFT 122 ms · p50 TPOT 24.7 ms · 24/24 ok
+12:50:38    bf16-ngram__spec-code__c8: 229 out tok/s · p50 TTFT 218 ms · p50 TPOT 29.1 ms · 24/24 ok
+12:51:30    bf16-ngram__spec-code__c16: 376 out tok/s · p50 TTFT 268 ms · p50 TPOT 34.7 ms · 48/48 ok
+12:58:36    bf16-ngram__spec-chat__c1: 16 out tok/s · p50 TTFT 77 ms · p50 TPOT 62.4 ms · 24/24 ok
+13:00:01    bf16-ngram__spec-chat__c8: 112 out tok/s · p50 TTFT 148 ms · p50 TPOT 70.4 ms · 24/24 ok
+13:01:31    bf16-ngram__spec-chat__c16: 210 out tok/s · p50 TTFT 158 ms · p50 TPOT 74.4 ms · 48/48 ok
+13:01:37  finished · 0 failed
